@@ -1,37 +1,45 @@
 <template>
   <div id="app">
-    <button @click="getData">点击获取数据</button>
-    {{testData}}
+    <mainFrame>
+
+      <Header slot="header">
+        <img src="./assets/img/head/head-texture.png" slot="texture">
+        <headMenu slot="menu"></headMenu>
+      </Header>
+
+      <sideLeft slot="sideLeft"></sideLeft>
+
+      <sideRight slot="sideRight"></sideRight>
+
+      <mainView slot="main"></mainView>
+    </mainFrame>
   </div>
 </template>
 
 <script>
-  import {request} from "network/request";
+import mainFrame from './components/content/mainFrame';
+import Header from './components/common/Head/Header';
+import headMenu from 'components/common/Head/headMenu.vue'
 
-  export default  {
-      name: 'App',
-      data(){
-          return{
-              testData:''
-          }
-      },
-      components:{
+import sideLeft from 'components/common/Side/sideLeft.vue'
+import sideRight from 'components/common/Side/sideRight.vue'
 
-      },
-      methods:{
-          getData(){
-              request({
-                  url:'/home/multidata'
-              }).then(res => {
-                  this.testData=res
-              }).catch(err =>{
-                  console.log(err);
-              })
-          }
-      }
+import mainView from 'components/common/Main/mainView.vue'
+
+
+export default {
+  name: 'App',
+  components: {
+    mainFrame,
+    Header,
+    headMenu,
+    sideLeft,
+    sideRight,
+    mainView
   }
+};
 </script>
 
 <style>
-  @import 'assets/css/base.css';
+@import 'assets/css/base.css';
 </style>
