@@ -36,4 +36,9 @@ export default {
     background-color: rgba(255,255,255,0.1);
     height: 450px;
   }
+  
+  .el-menu--horizontal >>> .el-menu-item{
+	  height: 40px;
+	  line-height: 40px;
+  }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="display">
     <div class="head"><slot name="header">Header</slot></div>
     <div class="body">
       <div class="left"><slot name="sideLeft">Aside-left</slot></div>
@@ -18,10 +18,16 @@ export default {
 </script>
 
 <style scoped>
+
+.display{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .head {
   margin: 0;
   padding: 0;
-  /* background-color: #B3C0D1; */
   color: #fff;
   text-align: center;
   height: 60px;
@@ -30,22 +36,23 @@ export default {
 .footer {
   margin: 0;
   padding: 0;
-  /* background-color: #B3C0D1; */
   color: #fff;
   text-align: center;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  /* height: 60px; */
+
+  /* background-color: #33B5F3; */
 }
 
 .body {
+  flex: 1;
+  /* background-color: #475669; */
   display: flex;
 }
 
 .left,
 .right {
   flex: 1;
+  /* overflow: hidden; */
   /* background-color: #D3DCE6; */
   color: #fff;
   /* text-align: center; */

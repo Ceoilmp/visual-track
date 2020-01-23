@@ -12,6 +12,6 @@
   .mainBar{
     margin-top: 10px;
     background-color: rgba(255,255,255,0.1);
-    height: 150px;
+    height: 170px;
   }
 </style>

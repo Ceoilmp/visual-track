@@ -7,12 +7,13 @@
         <headMenu slot="menu"></headMenu>
       </Header>
 
-      <sideLeft slot="sideLeft"></sideLeft>
+       <sideLeft slot="sideLeft" :fullHeight="fullHeight"></sideLeft>
 
-      <sideRight slot="sideRight"></sideRight>
+      <sideRight slot="sideRight" :fullHeight="fullHeight"></sideRight>
 
       <mainView slot="main"></mainView>
     </mainFrame>
+    <frame>
   </div>
 </template>
 
@@ -26,6 +27,8 @@ import sideRight from 'components/common/Side/sideRight.vue'
 
 import mainView from 'components/common/Main/mainView.vue'
 
+import frame from './components/content/frame.vue'
+
 
 export default {
   name: 'App',
@@ -35,11 +38,38 @@ export default {
     headMenu,
     sideLeft,
     sideRight,
-    mainView
+    mainView,
+    frame
+  },
+  data(){
+    return {
+      fullHeight
+    }
+  },
+  mounted() {
+    this.get_bodyHeight();
+  },
+  methods: {
+    get_bodyHeight() {
+      //动态获取浏览器高度
+      const that = this;
+      window.onresize = () => {
+        return (() => {
+          window.fullHeight = document.documentElement.clientHeight;
+          that.fullHeight = window.fullHeight;
+        })();
+      };
+    }
   }
 };
 </script>
 
 <style>
 @import 'assets/css/base.css';
+
+#app{
+  display: block;
+  height: 100%;
+  /* background-color: #475669; */
+}
 </style>

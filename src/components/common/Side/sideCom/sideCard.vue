@@ -6,6 +6,9 @@
     <el-collapse v-model="activeNames" @change="handleChange">
       <el-collapse-item title="图表1" name="2"><div><sideCardItem></sideCardItem></div></el-collapse-item>
     </el-collapse>
+    <el-collapse v-model="activeNames" @change="handleChange">
+      <el-collapse-item title="图表1" name="3"><div><sideCardItem></sideCardItem></div></el-collapse-item>
+    </el-collapse>
   </div>
 </template>
 
