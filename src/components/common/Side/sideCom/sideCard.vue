@@ -38,6 +38,7 @@ export default {
   color: white;
   padding-left: 10px;
   background-color: rgba(255, 255, 255, 0.12);
+  height: 36px;
 }
 
 .el-collapse-item >>> .el-collapse-item__wrap {
@@ -47,5 +48,6 @@ export default {
 
 .el-collapse-item >>> .el-collapse-item__content {
   color: #ffffff;
+  padding-bottom: 8px;
 }
 </style>

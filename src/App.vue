@@ -43,8 +43,11 @@ export default {
   },
   data(){
     return {
-      fullHeight
+      fullHeight:Number
     }
+  },
+  created(){
+    this.fullHeight = document.documentElement.clientHeight;
   },
   mounted() {
     this.get_bodyHeight();
@@ -70,6 +73,5 @@ export default {
 #app{
   display: block;
   height: 100%;
-  /* background-color: #475669; */
 }
 </style>

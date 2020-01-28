@@ -10,7 +10,7 @@
       <el-menu-item index="4">订单管理</el-menu-item>
 
     </el-menu>
-    <div class="routerView"><router-view></router-view></div>
+    <div class="routerView"><keep-alive><router-view></router-view></keep-alive></div>
 
   </div>
 </template>
@@ -36,9 +36,10 @@ export default {
     background-color: rgba(255,255,255,0.1);
     height: 450px;
   }
-  
+
   .el-menu--horizontal >>> .el-menu-item{
-	  height: 40px;
-	  line-height: 40px;
+	  height: 32px;
+	  line-height: 32px;
+    font-size: small;
   }
 </style>

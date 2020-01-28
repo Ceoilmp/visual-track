@@ -24,12 +24,12 @@ export default {
 
 <style scoped>
   .time {
-      font-size: 13px;
+      font-size: 10px;
       color: #999;
     }
 
     .bottom {
-      margin-top: 13px;
+      margin-top: 12px;
       line-height: 12px;
     }
 

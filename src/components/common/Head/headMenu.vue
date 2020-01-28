@@ -24,11 +24,11 @@ export default {
 }
 
 .el-dropdown-link img{
-  height: 28px;
+  height: 22px;
   /* margin-left: 16px; */
 }
 
 .el-icon-arrow-down {
-  font-size: 12px;
+  font-size: 10px;
 }
 </style>

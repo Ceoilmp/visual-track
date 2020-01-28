@@ -23,15 +23,15 @@
   .texture img{
     position: absolute;
     display: block;
-    height: 60px;
+    height: 48px;
     width: 100%;
   }
 
   .title{
     font-family: "黑体";
     color: #fff;
-    line-height: 40px;
-    font-size: 24px;
+    line-height: 32px;
+    font-size: 20px;
   }
 
   .head-bottom{

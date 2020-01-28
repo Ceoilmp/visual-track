@@ -30,7 +30,7 @@ export default {
   padding: 0;
   color: #fff;
   text-align: center;
-  height: 60px;
+  height: 48px;
 }
 
 .footer {

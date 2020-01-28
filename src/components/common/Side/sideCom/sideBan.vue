@@ -1,5 +1,5 @@
 <template>
-  <el-carousel height="150px" indicator-position="inside">
+  <el-carousel height="120px" indicator-position="inside">
     <el-carousel-item v-for="item in picItem" :key="item.id">
       <img :src="item.idView" class="image">
     </el-carousel-item>
@@ -22,14 +22,14 @@ export default {
 
 <style scoped>
   .el-carousel{
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
-  
+
 .el-carousel__item h3 {
   color: #475669;
-  font-size: 14px;
+  font-size: 12px;
   opacity: 0.75;
-  line-height: 150px;
+  line-height: 120px;
   margin: 0;
 }
 
